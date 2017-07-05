@@ -1,5 +1,7 @@
 # uploader
 uploader is an open source library that provides ajax file uploading using JQuery Ajax, and it's lightweight and customizable
+# Demo
+You can check the demo [here](https://elbourki.github.io/uploader/)
 # Getting Started
 Let's get started using uploader!
 
