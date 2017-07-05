@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Uploader - demo</title>        
+		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta content='Plugin to upload files using ajax with progress bar' name='description'/>
+		<meta content='plugin,ajax,jquery,file,upload,progress bar' name='keywords'/>
+		<script src="plugins.js" type="text/javascript"></script>
+		<script src="main.js" type="text/javascript"></script>
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"> 
+		<style>
+		body {
+			background : rgb(250, 250, 250);
+			font-family : Varela Round;
+		}
+		.main {
+			max-width: 350px;
+			background: white;
+			padding: 10px;
+			margin: 50px auto;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+			border-radius: 5px;
+		}
+		.main h3 {
+			margin-top: 10px;
+			text-align: center;
+			color: rgb(68, 68, 68);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<h3>Ajax File Upload</h3>
+			<p>uploader is an open source library that provides ajax file uploading using JQuery Ajax, and it's lightweight and customizable</p>
+			<p>This is the most minimal example of uploader. Take a look at the github page to see available options. </p>
+			<input type="file" id="input">
+		</div>
+		<script>
+			$('#input').uploader({
+				action        : 'https://posttestserver.com/post.php?dir=aj',
+				uploadText    : 'Upload File',
+				uploadingText : 'Uploading File',
+				uploadedText  : "File uploaded successfully",
+				uploadData    : { 'key' : 'value' },
+				uploadOptions : { dataType : 'text' },
+				before	      : function(){},
+				success       : function(data, textStatus, jqXHR){ console.log(data); },
+				error 	      : function(jqXHR, textStatus, errorThrown){ console.log(jqXHR); }, 
+				complete      : function(jqXHR, textStatus){ console.log(jqXHR); }
+			});
+		</script>
+	</body>
+</html>
