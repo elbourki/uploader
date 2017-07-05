@@ -33,6 +33,6 @@ $('#input').uploader({
 	complete      : function(jqXHR, textStatus){ console.log(jqXHR); } // Callback on completion
 });
 ```
-It's that easy to get started using uploader.js! F
+It's that easy to get started using uploader.js!
 # License
 This project is licensed under the terms of the MIT license.
